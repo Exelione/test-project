@@ -65,7 +65,7 @@ class ParamEditor extends React.Component<Props, State> {
     return (
       <div>
         {params.map(param => (
-          <div key={param.id}>
+          <div style={{width: '300px', display: 'flex', justifyContent: 'space-between', margin: '10px'}} key={param.id}>
             <label>{param.name}:</label>
             <input
               type="text"
@@ -74,6 +74,7 @@ class ParamEditor extends React.Component<Props, State> {
             />
           </div>
         ))}
+        <button style={{ margin: '10px', padding: '10px'}} onClick={() => console.log(this.getModel())}>getModel</button>
       </div>
     );
   }
